@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MY TODO_LIST</h1>
+
+    <% if (myItems.length === 0) { %>
+    <p>Votre liste est vide</p>
+    <% } else { %>
+    <ul>
+        <% myTasks.forEach(item => { %>
+        <li><%=  item %> </li>
+        <% }) %>
+    </ul>
+    <% } %>
+    <form action="todolist" method="POST">
+
+        <input name="task" type="text">
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+
+</html>
